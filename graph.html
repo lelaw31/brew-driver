@@ -8,6 +8,17 @@ function computeD(data, width, height) {
     return "M0 300 L100 200 L200 20 L450 280";
 }
 
+function computeD(data)
+{
+    let scaleX = val => val / (data.x.max - 0) * (500 - 0);
+    let scaleY = val => 300 - val / (data.y.max - 0) * (300 - 0);
+
+    let d = "M" + scaleX(data.x.values[0]) + " " + scaleY(data.y.values[0]);
+    for (let i=1; i<data.x.values.length; i++)
+        d = d + " L" + scaleX(data.x.values[i]) + " " + scaleY(data.y.values[i]);
+    return d;
+}
+
 function buildAxis(orientation, minVal, maxVal, ticks) {
     let axis = '<div class="' + orientation + '-axis">';
     const step = (maxVal - minVal) / (ticks - 1);
@@ -29,7 +40,7 @@ function renderLineCharts() {
         // compute view box
         // update chart
         chart.innerHTML = '<svg width="' + chartWidth + '" height="' + chartHeight + '">'
-                        + '  <path d="' + computeD(30) + '"></path>'
+                        + '  <path d="' + computeD(data) + '"></path>'
                         + '</svg>'
                         + buildAxis("x", data.x.min, data.x.max, 5)
                         + buildAxis("y", data.y.min, data.y.max, 5);
