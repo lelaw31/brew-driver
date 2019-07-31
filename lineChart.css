@@ -1,8 +1,8 @@
 /* Structure of chart, changing this can break the display */
 .LineChart {
     position: relative; /* to anchor to axis, their absolute position will be from here */
-    margin-left: 40px;
-    margin-bottom: 40px;
+    border-left: 40px solid;
+    border-bottom: 40px solid;
 }
 
 .LineChartSvg {
@@ -42,19 +42,18 @@
     font-family: sans-serif;
     font-size: 14px;
     background-color: #EEEEEE;
+    border-color: #EEEEEE; /* border is use to make room for axis */
 }
 
 .x-axis {
-    border-color: black;
+    border-color: black; /* stand for actual axis line*/
     /*background-color: #88FF88;*/
-    background-color: #EEEEEE;
     color: black;
 }
 
 .y-axis {
-    border-color: black;
+    border-color: black; /* stand for actual axis line*/
     /*background-color: #8888FF;*/
-    background-color: #EEEEEE;
     color: black;
 }
 
