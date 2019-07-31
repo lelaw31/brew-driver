@@ -1,0 +1,64 @@
+/* Structure of chart, changing this can break the display */
+.LineChart {
+    position: relative; /* to anchor to axis, their absolute position will be from here */
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.LineChartSvg {
+    fill: none;
+    display: block;
+}
+
+.x-axis {
+    position: absolute;
+    bottom: -40px;
+    left: 0px;
+    height: 36px;
+    width: 100%;
+    padding-top: 4px;
+    border-top: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-middle;
+}
+
+.y-axis {
+    position: absolute;
+    bottom: 0px;
+    left: -40px;
+    width: 36px;
+    height: 100%;
+    padding-right: 4px;
+    border-right: 1px solid;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* Style part, this is just style rendering and can be modified freely */
+.LineChart {
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color: #EEEEEE;
+}
+
+.LineChartSvg {
+    stroke: #33C7FF;
+    stroke-width: 2px;
+}
+
+.x-axis {
+    border-color: black;
+    /*background-color: #88FF88;*/
+    background-color: #EEEEEE;
+    color: black;
+}
+
+.y-axis {
+    border-color: black;
+    /*background-color: #8888FF;*/
+    background-color: #EEEEEE;
+    color: black;
+}
