@@ -44,11 +44,6 @@
     background-color: #EEEEEE;
 }
 
-.LineChartSvg {
-    stroke: #33C7FF;
-    stroke-width: 2px;
-}
-
 .x-axis {
     border-color: black;
     /*background-color: #88FF88;*/
@@ -61,4 +56,14 @@
     /*background-color: #8888FF;*/
     background-color: #EEEEEE;
     color: black;
+}
+
+.LineChartSvg {
+    stroke: #33C7FF;
+    stroke-width: 2px;
+}
+
+.ChartGrid {
+    stroke: #FF0000;
+    stroke-width: 1px;
 }
